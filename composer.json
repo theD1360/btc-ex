@@ -1,0 +1,20 @@
+{
+    "name": "thed1360/btc-ex",
+    "description": "Wrapping library for multiple BTC exchange protocols",
+    "authors": [
+        {
+            "name": "Diego Alejos",
+            "email": "lego.admin@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "thed1360/array-helper": "dev-master",
+        "thed1360/mtgox-api-v1-php-class": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "BitcoinExchange": "src"
+        }
+    }
+}
