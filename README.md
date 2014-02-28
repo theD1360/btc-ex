@@ -24,8 +24,8 @@ Installation is extremely easy using composer by adding the package to your `com
 ```
 
 If you are unfamiliar please visit.
-https://getcomposer.org/
-https://packagist.org/
+* https://getcomposer.org/
+* https://packagist.org/
 
 
 Usage
