@@ -19,7 +19,7 @@ Installation is extremely easy using composer by adding the package to your `com
 ```
     "require": {
         "php": ">=5.4.0",
-        "BitcoinExchange" : "thed1360/btc-ex"
+        "thed1360/btc-ex": "dev-master"
     }
 ```
 

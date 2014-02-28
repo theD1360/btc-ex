@@ -4,7 +4,18 @@ class MtGox extends \MtGox\MtGox
 {
 
 	public function ticker(){
-		return new Arr($this->getTicker());
+		$ticker = new Arr($this->getTicker());
+		$new_ticker = new Arr([
+		  "high"=> $ticker->high->value,
+		  "last"=> $ticker->last->value,
+		  "timestamp"=> time(),
+		  "bid"=> $ticker->buy->value,
+		  "volume"=> $ticker->vol->value,
+		  "low"=> $ticker->low->value,
+		  "ask"=> $ticker->sell->value
+		]);
+		
+		return $new_ticker;
 	}
 
 	public function buy(){
