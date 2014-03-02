@@ -19,7 +19,7 @@ Installation is extremely easy using composer by adding the package to your `com
 ```
     "require": {
         "php": ">=5.4.0",
-	"thed1360/array-helper": "dev-master",
+        "thed1360/array-helper": "dev-master",
         "thed1360/mtgox-api-v1-php-class": "dev-master",
         "thed1360/btc-ex": "dev-master"
     }
