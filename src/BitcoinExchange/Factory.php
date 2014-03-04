@@ -30,6 +30,13 @@ class Factory {
 			  			"secret",
 			  			"base_noonce"
 			  		]
+			  	],
+			  	"kraken" => [
+			  		"namespace" => "BitcoinExchange\Drivers\Kraken",
+			  		"params" => [
+			  			"key",
+			  			"secret"
+			  		]
 			  	]
 			  ],
 			  $config = [],

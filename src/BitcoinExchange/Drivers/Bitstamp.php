@@ -1,8 +1,9 @@
 <?php namespace BitcoinExchange\Drivers;
 
+use BitcoinExchange\DriverInterface;
 use Utilities\Arr;
 
-class Bitstamp extends \BitcoinExchange\Exchanges\Bitstamp
+class Bitstamp extends \BitcoinExchange\Exchanges\Bitstamp implements DriverInterface
 {
 
 	public function ticker(){
