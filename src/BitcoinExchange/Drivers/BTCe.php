@@ -35,5 +35,7 @@ class BTCe extends \BitcoinExchange\Exchanges\BTCeAPI implements DriverInterface
 
 	public function balance(){}
 
+	public function orders(){}
+
 
 }

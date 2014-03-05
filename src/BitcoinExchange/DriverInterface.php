@@ -12,4 +12,6 @@ interface DriverInterface {
 
 	public function balance();
 
+	public function orders();
+
 }

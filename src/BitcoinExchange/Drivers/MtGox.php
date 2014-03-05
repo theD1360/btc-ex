@@ -37,5 +37,6 @@ class MtGox extends \MtGox\MtGox
 		$info = parent::getInfo();
 		return new Arr($info['Wallets']);
 	}
+	public function orders(){}
 
 }

@@ -34,6 +34,8 @@ class Kraken extends \BitcoinExchange\Exchanges\KrakenAPI implements DriverInter
 	public function cancel(){}
 
 	public function balance(){}
+	
+	public function orders(){}
 
 
 }
