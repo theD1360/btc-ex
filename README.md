@@ -8,8 +8,9 @@ This project aims to create a common interface to the various exchange API's tha
 Curent list of clients and their status is as follows.
 
 * Bitstamp - willmoss/bitstamp-php-api (mostly normalized)
-* MtGox - thed1360/mtgox-api-v1-php-class (mostly normalized __doesn't matter they're dead anyways__)
+* ~~MtGox - thed1360/mtgox-api-v1-php-class (mostly normalized __doesn't matter they're dead anyways__)~~
 * BTC-e - marinu666/PHP-btce-api (only ticker method normalized)
+* Kraken - payward/kraken-api-client (only ticker method normalized)
 
 Installation
 ============
@@ -20,7 +21,6 @@ Installation is extremely easy using composer by adding the package to your `com
     "require": {
         "php": ">=5.4.0",
         "thed1360/array-helper": "dev-master",
-        "thed1360/mtgox-api-v1-php-class": "dev-master",
         "thed1360/btc-ex": "dev-master"
     }
 ```
