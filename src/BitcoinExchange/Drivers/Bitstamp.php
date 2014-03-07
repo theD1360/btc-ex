@@ -26,6 +26,9 @@ class Bitstamp extends \BitcoinExchange\Exchanges\Bitstamp implements DriverInte
 		return new Arr(parent::balance());
 	}
 
-	public function orders(){}
+	public function orders(){
+
+		return new Arr($this->openOrders());
+	}
 
 }
