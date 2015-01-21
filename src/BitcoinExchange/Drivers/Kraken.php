@@ -4,7 +4,7 @@ use BitcoinExchange\DriverInterface;
 use Utilities\Arr;
 use Exception;
 
-class Kraken extends \BitcoinExchange\Exchanges\KrakenAPI implements DriverInterface
+class Kraken extends \Payward\KrakenAPI implements DriverInterface
 {
 	public function ticker($pair = "XXBTZUSD"){
 		$response = new Arr($this->QueryPublic('Ticker', array('pair' => $pair)));

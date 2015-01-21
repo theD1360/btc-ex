@@ -4,38 +4,43 @@ use BitcoinExchange\DriverInterface;
 use Utilities\Arr;
 use Exception;
 
-class BTCe extends \BitcoinExchange\Exchanges\BTCeAPI implements DriverInterface
+class BTCe extends \Undelete\BTCEApi\Api implements DriverInterface
 {
-	public function ticker($pair = "btc_usd"){
-		$response = new Arr($this->getPairTicker($pair));
-		$ticker = $response->ticker;
+	protected $default_pair = "btc_usd";
 
-		$new_ticker = new Arr([
-		  "high"=> (string) $ticker->high,
-		  "last"=> (string) $ticker->last,
-		  "timestamp"=>  (string) $ticker->updated,
-		  "bid"=> (string) $ticker->buy,
-		  "volume"=> (string) $ticker->vol,
-		  "low"=> (string) $ticker->low,
-		  "ask"=> (string) $ticker->sell
-		]);
-		
-		return $new_ticker;		
+	public function ticker($pair = "btc_usd"){
+
+		if(empty($pair)){
+			$pair = $this->default_pair;
+		}
+
+		return new Arr($this->getTicker($pair));
+	
 	}
 
 	// I don't have a BTC-e accout someone will have to contribute
 	// this driver to the project
 
 
-	public function buy(){}
+	public function buy($amount, $price){
+		return new Arr($this->orderTrade($this->default_pair, 'buy', $amount, $price));
+	}
 
-	public function sell(){}
+	public function sell($amount, $price){
+		return new Arr($this->orderTrade($this->default_pair, 'sell', $amount, $price));
+	}
 
-	public function cancel(){}
+	public function cancel($order_id){
+		return new Arr($this->cancelOrder($order_id));
+	}
 
-	public function balance(){}
+	public function balance(){
+		return new Arr($this->getFunds());
+	}
 
-	public function orders(){}
+	public function orders(){
+		return new Arr($this->getActiveOrders());
+	}
 
 
 }

@@ -4,11 +4,11 @@ interface DriverInterface {
 	
 	public function ticker();
 
-	public function buy();
+	public function buy($amount, $price);
 
-	public function sell();
+	public function sell($amount, $price);
 
-	public function cancel();
+	public function cancel($order_id);
 
 	public function balance();
 

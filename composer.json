@@ -9,8 +9,17 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "thed1360/array-helper": "dev-master"
+        "thed1360/array-helper": "dev-master",
+        "coinbase/coinbase" : "dev-master",
+        "payward/kraken-api-client": "dev-master",
+        "undelete/btce-api": "dev-master"
     },
+    "repositories": [
+        {
+            "type": "git",
+            "url":  "git@github.com:willmoss/bitstamp-php-api.git"
+        }
+    ],
     "autoload": {
         "psr-0": {
             "BitcoinExchange": "src"

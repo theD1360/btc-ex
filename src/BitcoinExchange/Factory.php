@@ -8,7 +8,7 @@ class Factory {
 
 	protected $drivers = [
 			  	"mtgox" => [
-			  		"namespace" => "BitcoinExchange\Drivers\MtGox",
+			  		"className" => "MtGox",
 			  		"params" => [
 			  			"key",
 			  			"secret",
@@ -16,7 +16,7 @@ class Factory {
 			  		]
 			  	],
 			  	"bitstamp" => [
-			  		"namespace" => "BitcoinExchange\Drivers\Bitstamp",
+			  		"className" => "Bitstamp",
 			  		"params" => [
 			  			"key",
 			  			"secret",
@@ -24,15 +24,21 @@ class Factory {
 			  		]
 			  	],
 			  	"btc-e" => [
-			  		"namespace" => "BitcoinExchange\Drivers\BTCe",
+			  		"className" => "BTCe",
 			  		"params" => [
 			  			"key",
-			  			"secret",
-			  			"base_noonce"
+			  			"secret"
 			  		]
 			  	],
 			  	"kraken" => [
-			  		"namespace" => "BitcoinExchange\Drivers\Kraken",
+			  		"className" => "Kraken",
+			  		"params" => [
+			  			"key",
+			  			"secret"
+			  		]
+			  	],
+			  	"coinbase" => [
+			  		"className" => "Coinbase",
 			  		"params" => [
 			  			"key",
 			  			"secret"
@@ -78,7 +84,7 @@ class Factory {
 
 		$params = $this->driverConfig($driver)->toArray();
 
-		$instance = new ReflectionClass($this->drivers->get($driver)->namespace);
+		$instance = new ReflectionClass("BitcoinExchange\\Drivers\\".$this->drivers->get($driver)->className);
 		$this->instance = $instance->newInstanceArgs($params);
 		return $this->instance;
 		
