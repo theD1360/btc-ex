@@ -1,6 +1,8 @@
 <?php namespace BitcoinExchange\Drivers;
 
 use BitcoinExchange\DriverInterface;
+use BitcoinExchange\Responses\TickerResponse;
+
 use Utilities\Arr;
 use Exception;
 
@@ -14,7 +16,7 @@ class BTCe extends \Undelete\BTCEApi\Api implements DriverInterface
 			$pair = $this->default_pair;
 		}
 
-		return new Arr($this->getTicker($pair));
+		return new TickerResponse($this->getTicker($pair));
 	
 	}
 

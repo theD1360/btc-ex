@@ -1,13 +1,15 @@
 <?php namespace BitcoinExchange\Drivers;
 
 use BitcoinExchange\DriverInterface;
+use BitcoinExchange\Responses\TickerResponse;
+
 use Utilities\Arr;
 
-class Bitstamp extends \BitcoinExchange\Exchanges\Bitstamp implements DriverInterface
+class Bitstamp extends \Bitstamp\Bitstamp implements DriverInterface
 {
 
 	public function ticker(){
-		return new Arr(parent::ticker());
+		return new TickerResponse(parent::ticker());
 	}
 
 	public function buy($amount, $price){

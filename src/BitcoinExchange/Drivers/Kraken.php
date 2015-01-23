@@ -1,6 +1,8 @@
 <?php namespace BitcoinExchange\Drivers;
 
 use BitcoinExchange\DriverInterface;
+use BitcoinExchange\Responses\TickerResponse;
+
 use Utilities\Arr;
 use Exception;
 
@@ -10,7 +12,7 @@ class Kraken extends \Payward\KrakenAPI implements DriverInterface
 		$response = new Arr($this->QueryPublic('Ticker', array('pair' => $pair)));
 		$ticker = $response->result->get($pair);
 
-		$new_ticker = new Arr([
+		$new_ticker = new TickerResponse([
 		  "high"=> (string) $ticker->h->at(0),
 		  "last"=> (string) $ticker->c->first(),
 		  "timestamp"=>  (string) time(),
@@ -27,11 +29,11 @@ class Kraken extends \Payward\KrakenAPI implements DriverInterface
 	// this driver to the project
 
 
-	public function buy(){}
+	public function buy($price, $amount){}
 
-	public function sell(){}
+	public function sell($price, $amount){}
 
-	public function cancel(){}
+	public function cancel($order_id){}
 
 	public function balance(){}
 	

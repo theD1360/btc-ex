@@ -2,6 +2,9 @@
 
 use BitcoinExchange\DriverInterface;
 use Utilities\Arr;
+use BitcoinExchange\Responses\TickerResponse;
+
+
 
 class Coinbase extends \Coinbase implements DriverInterface
 {
@@ -15,7 +18,7 @@ class Coinbase extends \Coinbase implements DriverInterface
 		$buy = $this->getBuyPrice('1');
 		$sell = $this->getSellPrice('1');
 
-		$new_ticker = new Arr([
+		$new_ticker = new TickerResponse([
 		  "high"=> null,
 		  "last"=> (string) (($buy + $sell)/2),
 		  "timestamp"=>  (string) time(),
@@ -30,17 +33,16 @@ class Coinbase extends \Coinbase implements DriverInterface
 	}
 
 	public function buy($amount, $price = null){
-		$response = $this->buy($amount);
+		$response = parent::buy($amount);
 		return new Arr($response);
 	}
 
 	public function sell($amount, $price = null){
-		$response = $this->sell($amount);
+		$response = parent::sell($amount);
 		return new Arr($response);	}
 
 	public function cancel($order_id){
-
-
+		
 	}
 
 	public function balance(){

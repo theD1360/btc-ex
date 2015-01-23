@@ -43,6 +43,13 @@ class Factory {
 			  			"key",
 			  			"secret"
 			  		]
+			  	],
+			  	"campbx" => [
+			  		"className" => "CampBx",
+			  		"params" => [
+			  			"username",
+			  			"password"
+			  		]
 			  	]
 			  ],
 			  $config = [],
