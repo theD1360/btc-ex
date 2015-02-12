@@ -32,6 +32,7 @@ try{
 
 	foreach($instances as $driver=>$instance){
 		$c = $instance->client();
+		echo "Driver: $driver\n";
 		var_dump($c->ticker());
 	}
 

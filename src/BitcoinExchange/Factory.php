@@ -50,6 +50,13 @@ class Factory {
 			  			"username",
 			  			"password"
 			  		]
+			  	],
+			  	"simulation" => [
+			  	    "className" => "Simulation",
+			  	    "params" => [
+			  	        "btcBal",
+			  	        "usdBal"
+			  	    ]
 			  	]
 			  ],
 			  $config = [],
