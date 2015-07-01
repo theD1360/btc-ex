@@ -10,7 +10,7 @@
     "require": {
         "php": ">=5.4.0",
         "thed1360/array-helper": "dev-master",
-        "coinbase/coinbase-php" : "dev-master",
+        "coinbase/coinbase" : "1.1",
         "payward/kraken-api-client": "dev-master",
         "undelete/btce-api": "dev-master",
         "willmoss/bitstamp-php-api" : "dev-master",
