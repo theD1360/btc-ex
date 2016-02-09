@@ -10,7 +10,6 @@
     "require": {
         "php": ">=5.4.0",
         "thed1360/array-helper": "dev-master",
-        "coinbase/coinbase" : "dev-master",
         "payward/kraken-api-client": "dev-master",
         "undelete/btce-api": "dev-master",
         "willmoss/bitstamp-php-api" : "dev-master",
@@ -27,7 +26,6 @@
             "url":  "git@github.com:theD1360/CampBX-PHP.git"
         }
     ],
-    "require-all" : true,
     "autoload": {
         "psr-0": {
             "BitcoinExchange": "src"

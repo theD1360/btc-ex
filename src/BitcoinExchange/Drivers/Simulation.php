@@ -17,7 +17,7 @@ class Simulation extends Bitstamp implements DriverInterface
 
 	protected $orders;
 
-	public function __construct($btcBal, $usdBal)
+	public function __construct($btcBalance, $usdBalance)
 	{
 		// plug in random vals to instanciate and run ticker without authing 
 		parent::__construct("fdas", "asdf", "5634");
