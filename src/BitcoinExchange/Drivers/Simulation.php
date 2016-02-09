@@ -60,7 +60,7 @@ class Simulation extends Bitstamp implements DriverInterface
 			"type" => "sell",
 			"amount" => $amount, 
 			"price" => $price,
-			"total" => (($price/$amount) - (($price/$amount)*$this->fee)),
+			"total" => (($price*$amount) - (($price*$amount)*$this->fee)),
 			"status" => "complete"
 		];
 
